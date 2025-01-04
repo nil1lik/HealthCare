@@ -1,20 +1,84 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+![Kayt2025-01-04134019-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0381ded3-7ffa-4276-bec9-872a12297f5b)
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Laboratuvar Yönetim Sistemi - ABP Framework & Blazor
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Bu proje, ABP Framework ile geliştirilmiş bir laboratuvar yönetim sistemi uygulamasıdır. Blazor tabanlı bir arayüze sahiptir ve ABP’nin güçlü modüler yapısını kullanır.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+---
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## 🚀 Kurulum
+
+Projenizi yerel ortamda çalıştırmak için aşağıdaki adımları izleyin:
+
+### 📋 Gerekli Araçlar
+Projenin çalışması için şu araçların yüklü olduğundan emin olun:
+- [.NET SDK 7.0 veya üzeri](https://dotnet.microsoft.com/download)
+- [Redis](https://redis.io/) (Cache için)
+
+### 🛠️ Adımlar
+
+#### 1. Projeyi Klonlayın
+```bash
+git clone https://github.com/nil1lik/HealthCare.git
+cd Pusula.Training.HealthCare
+```
+
+#### 2. Gereksinimleri Yükleyin
+**Backend** için gerekli bağımlılıkları yüklemek:
+```bash
+dotnet restore
+```
+**Frontend** için gerekli bağımlılıkları yüklemek:
+```bash
+cd src/Pusula.Training.HealthCare.Blazor
+npm install
+install-libs
+```
+
+#### 3. Veritabanını Güncelleyin
+Veritabanını oluşturmak ve güncellemek için migration komutlarını çalıştırın:
+```bash
+dotnet run --project src/Pusula.Training.HealthCare.DbMigrator
+```
+
+#### 4. Redis Çalıştırın
+Redis’in çalıştığından emin olun. Redis’i Docker ile çalıştırabilirsiniz:
+```bash
+docker run -d -p 6379:6379 redis
+```
+
+#### 5. Projeyi Çalıştırın
+**Backend API**'yi çalıştırmak için:
+```bash
+dotnet run --project src/Pusula.Training.HealthCare.Tooling.Aspire
+```
+**Blazor UI**'yi çalıştırmak için:
+```bash
+dotnet run --project src/Pusula.Training.HealthCare.Blazor
+```
+
+#### 6. Uygulamayı Açın
+Tarayıcınızda aşağıdaki URL'lere giderek projeyi görüntüleyebilirsiniz:
+- **API**: `https://localhost:44301`
+- **Blazor UI**: `https://localhost:44302`
+
+---
+
+## 🔧 Kullanılan Teknolojiler
+
+- **ABP Framework**  
+- **Blazor**  
+- **Syncfusion** bileşenleri  
+- **Entity Framework Core**  
+- **Redis**  
+- **MERNIS Entegrasyonu**  
+
+---
+
+## 🤝 Katkıda Bulunma
+
+Proje hakkında geri bildirim veya katkı sağlamak için bir **Pull Request** gönderebilirsiniz.
+
+---
+
+**Not:** Herhangi bir sorunla karşılaşırsanız lütfen bir **Issue** açın. 😊
